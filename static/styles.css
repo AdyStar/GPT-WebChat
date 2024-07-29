@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif; /* Default font settings */
+    font-size: 16px; /* Default font size */
+    line-height: 1.5; /* Default line height */
+    font-weight: normal; /* Default font weight */
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.chat-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 400px;
+    overflow-y: scroll;
+    background-color: #f9f9f9;
+}
+
+body.dark-mode .chat-box {
+    background-color: #1d1d1d;
+}
+
+.dall-e-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+.chat-box .user-message, .chat-box .bot-response {
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+body.dark-mode .chat-box .user-message, body.dark-mode .chat-box .bot-response {
+    color: white;
+}
+
+/* Prism.js code block styling */
+pre[class*="language-"] {
+    background-color: #dfddddc4;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    margin: 0;
+    position: relative;  /* For positioning the copy button */
+    user-select: none;  /* Prevents code block from being selected */
+    font-family: Arial, sans-serif; /* Match normal text font */
+    font-size: 16px; /* Match normal text font size */
+    line-height: 1.5; /* Match normal text line height */
+    font-weight: normal; /* Ensure normal font weight */
+    text-shadow: none; /* Remove text shadow */
+    color: inherit; /* Inherit text color from parent */
+}
+
+body.dark-mode pre[class*="language-"] {
+    background-color: #5e5e5e50;
+    color: white;
+    font-family: Arial, sans-serif; /* Match normal text font */
+    font-size: 16px; /* Match normal text font size */
+    line-height: 1.5; /* Match normal text line height */
+    font-weight: normal; /* Ensure normal font weight */
+    text-shadow: none; /* Remove text shadow */
+}
+
+code[class*="language-"] {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-family: Arial, sans-serif; /* Match normal text font */
+    font-size: 16px; /* Match normal text font size */
+    line-height: 1.5; /* Match normal text line height */
+    font-weight: normal; /* Ensure normal font weight */
+    text-shadow: none; /* Remove text shadow */
+    user-select: text; /* Allow text selection for copying */
+    color: inherit; /* Inherit text color from parent */
+}
+
+body.dark-mode code[class*="language-"] {
+    color: white;
+    font-family: Arial, sans-serif; /* Match normal text font */
+    font-size: 16px; /* Match normal text font size */
+    line-height: 1.5; /* Match normal text line height */
+    font-weight: normal; /* Ensure normal font weight */
+    text-shadow: none; /* Remove text shadow */
+    user-select: text; /* Allow text selection for copying */
+}
+
+/* Specific styles to address unusual character rendering */
+pre[class*="language-"] span, code[class*="language-"] {
+    background-color: transparent; /* Ensure no background color */
+    color: inherit; /* Inherit color */
+    font-weight: normal; /* Ensure normal font weight */
+    text-shadow: none; /* Remove any text shadow */
+}
+
+/* Styles to fix selected appearance of operators and punctuation */
+.token.operator, .token.punctuation {
+    background: none !important;
+    color: inherit;
+}
+
+/* Copy button styling */
+.copy-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: #007bff; /* Blue background for light mode */
+    color: white;
+    border: none;
+    padding: 5px 10px; /* Adjust padding for better fit */
+    border-radius: 5px;
+    font-size: 12px; /* Adjust font size for better fit */
+}
+
+body.dark-mode .copy-button {
+    background-color: #006bb3; /* Darker blue for dark mode */
+    color: white;
+}
+
+/* System message styling */
+.system-message {
+    color: #007bff;
+    font-style: italic;
+}
+
+/* List group item active state */
+.list-group-item.active {
+    background-color: #007bff;
+    color: white;
+}
